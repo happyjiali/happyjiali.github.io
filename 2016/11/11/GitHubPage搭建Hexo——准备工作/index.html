@@ -10,6 +10,13 @@
 
     <!--Description-->
     
+        <meta name="description" content="#GitHub账号Github全球最大的基友平台。注册账号就不多说了，跪求不要使用QQ邮箱注册GitHub。登录后正式开始
+####第一步：新建仓库
+
+####第二步：输入需要创建的仓库名。格式为账号名.github.io完成后，创建即可。
+songwear.github.io
+之前我已经创建过了，">
+    
 
     <!--Author-->
     
@@ -18,7 +25,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Hexo"/>
+        <meta property="og:title" content="GitHubPage搭建Hexo——准备工作"/>
     
 
     <!--Open Graph Description-->
@@ -29,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -40,7 +47,7 @@
 
     <!-- Title -->
     
-    <title>Archivo - Hexo</title>
+    <title>GitHubPage搭建Hexo——准备工作 - Hexo</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -123,89 +130,105 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Archivo</h1>
+                <div class="post-heading">
+                    <h1>GitHubPage搭建Hexo——准备工作</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-11-11
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2016/11/11/GitHubPage搭建Hexo——准备工作/">
-        <h1 class="post-title archive">
-            GitHubPage搭建Hexo——准备工作
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-11-11
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>#GitHub账号<br>Github全球最大的基友平台。注册账号就不多说了，跪求不要使用QQ邮箱注册GitHub。<br>登录后正式开始</p>
+<p>####第一步：新建仓库</p>
+<p><img src="http://i.imgur.com/prhgmQn.png" alt=""></p>
+<p>####第二步：输入需要创建的仓库名。<br>格式为账号名.github.io完成后，创建即可。</p>
+<pre><code>songwear.github.io
+之前我已经创建过了，所以系统提示已经存在。
+</code></pre><p><img src="http://i.imgur.com/qNZU08z.png" alt=""></p>
+<p>就是这么简单，仓库已经创建完成，稍后我们会上传代码。</p>
+<p>#NodeJS环境<br>Hexo是一个基于Node.js的静态博客程序。因此我们需要NodeJS来安装Hexo。安装步骤没什么好说的，<a href="https://nodejs.org/en/" target="_blank" rel="external">官网</a>直接下载安装程序即可，也无需配置环境变量。(nodejs中已经包含npm无需再次下载)</p>
+<p><img src="http://i.imgur.com/1uYUSFN.png" alt=""></p>
+<p>#Git客户端<br>Git就不多说了，<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank" rel="external">廖雪峰</a>讲的足够好了，我只是讲一下我们常用的命令。</p>
+<p>####第一步：安装Git<br>到<a href="https://git-scm.com/downloads" target="_blank" rel="external">官网</a>下载，一切默认，安装即可。成功之后，桌面会多出一个Git Bash的快捷方式，以后我们进行版本控制完全靠他了。</p>
+<p><img src="http://i.imgur.com/G6Sbq66.png" alt=""></p>
+<p>####第二步：设置本地的Git账号</p>
+<p>打开Git Bash，输入下面的命令，表示你这台机器上所有的Git仓库都会使用这个账户操作。</p>
+<pre><code>$ git config --global user.name &quot;Your Name&quot;
+$ git config --global user.email &quot;email@example.com&quot;
+</code></pre><p>如果需要查看当前设置的用户名和邮箱，分别执行下面的操作</p>
+<pre><code>$ git config user.name
+$ git config user.email
+</code></pre><p>如果需要查看当前设置的用户名和邮箱，分别执行下面的操作    </p>
+<pre><code>$ git config --global user.name &quot;username&quot;
+$ git config --global user.email &quot;email&quot;    
+</code></pre><p>####第三步：关联GitHub账号<br>首先在本地生成密钥，存放的路径就是后面显示的地址，如果不做修改</p>
+<pre><code>默认为：C:\Users\Administrator\.ssh
+
+ssh-keygen -t rsa -C &quot;你的Github邮箱&quot;
+</code></pre><p><img src="http://i.imgur.com/4MQ2NRC.png" alt=""></p>
+<p>接下来提示输入密码，为了应对即使密钥文件不小心泄露了，别人也不能直接利用密钥操作你的git帐号这个问题。当然，为了操作方便，直接输入回车，使其为空即可。</p>
+<p><img src="http://i.imgur.com/sZq0s9z.png" alt=""></p>
+<p>确认你输入的密码</p>
+<p><img src="http://i.imgur.com/OB88YWN.png" alt=""></p>
+<p>设置成功</p>
+<p><img src="http://i.imgur.com/qAPmd70.png" alt=""></p>
+<p>我们进入到本地 <code>C:\Users\Administrator\.ssh</code> 文件夹下,找到<code>id_rsa.pub</code>这个文件，使用记事本即可打开，复制全部代码。</p>
+<p><img src="http://i.imgur.com/ApQ7j2M.png" alt=""></p>
+<p>接下来，打开GitHub，选择Settings——SSH and GPG keys——New SSH key，将我们刚刚复制的<code>id_rsa.pub</code>中的内容粘贴到Key中，Title可以自定义。</p>
+<p><img src="http://i.imgur.com/3Z0vVj7.png" alt=""></p>
+<p><img src="http://i.imgur.com/DuMdWqq.png" alt=""></p>
+<p>填写完成后，选择按钮Add SSH key。</p>
+<p><img src="http://i.imgur.com/uWHMN3V.png" alt=""></p>
+<p>接下来要求你输入你的GitHub密码。</p>
+<p><img src="http://i.imgur.com/yyUmNey.png" alt=""></p>
+<p>确认后，将会显示下图效果。</p>
+<p><img src="http://i.imgur.com/SVjtFuf.png" alt=""></p>
+<p>以上，GitHub上的工作就完成了。</p>
+<p>回到Git中，输入命令,提示Hi 用户名!You’ve successfully………………就成功了。</p>
+<pre><code>ssh -T git@github.com
+</code></pre><p><img src="http://i.imgur.com/GDJXsP0.png" alt=""></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2016/11/11/GitHubPage搭建Hexo——安装Hexo/">
-        <h1 class="post-title archive">
-            GitHubPage搭建Hexo——安装Hexo
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-11-11
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2016/11/10/GitHubPage搭建Hexo——域名/">
-        <h1 class="post-title archive">
-            GitHubPage搭建Hexo——域名
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-11-10
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2016/11/06/hello-world/">
-        <h1 class="post-title archive">
-            Hello World
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2016-11-06
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
-
+</article>
 
     <!-- Footer -->
     <hr />
