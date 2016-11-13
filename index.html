@@ -1,273 +1,499 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
+<html>
 <head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <!--Description-->
-    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
 
-    <!--Author-->
-    
-        <meta name="author" content="John Doe">
-    
-
-    <!--Open Graph Title-->
-    
-        <meta property="og:title" content="Hexo"/>
-    
-
-    <!--Open Graph Description-->
-    
-
-    <!--Open Graph Site Name-->
-    <meta property="og:site_name" content="Hexo"/>
-
-    <!--Type page-->
-    
-        <meta property="og:type" content="website" />
-    
-
-    <!--Page Cover-->
-    
-
-        <meta name="twitter:card" content="summary" />
-    
-
-    <!-- Title -->
-    
-    <title>Hexo</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/style.css">
-
-    <!-- Custom Fonts -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- Gallery -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
-
-    <!-- Google Analytics -->
-    
-
+  <link rel="stylesheet" href="/css/styles.css">
+  
 
 </head>
 
-
 <body>
-
-    <!-- Menu -->
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">Songwear's Blog</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                
-                    <li>
-                        <a href="/">
-                            
-                                Home
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/archives">
-                            
-                                Archives
-                            
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://github.com/klugjo/hexo-theme-clean-blog">
-                            
-                                <i class="fa fa-github fa-stack-2x"></i>
-                            
-                        </a>
-                    </li>
-                
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
     </div>
-    <!-- /.container -->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="main-menu-navbar">
+      <ul class="nav navbar-nav">
+        
+          <li><a class="active"
+                 href="/index.html">Home</a></li>
+        
+          <li><a class=""
+                 href="/archives/">Archives</a></li>
+        
+      </ul>
+
+      <!--
+      <ul class="nav navbar-nav navbar-right">
+        
+          <li><a href="/atom.xml" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
+        
+      </ul>
+      -->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
 
-    <!-- Main Content -->
-    <!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
-<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Hexo</h1>
-                    <hr class="small">
-                    <span class="subheading"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+  <div class="container">
+    <div class="blog-header">
+  <h1 class="blog-title">Hexo</h1>
+  
+</div>
 
-<!-- Main Content -->
-<div class="container">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            
-                <div class="post-preview">
-    <a href="/2016/11/11/GitHubPage搭建Hexo——准备工作/">
-        <h2 class="post-title">
-            GitHubPage搭建Hexo——准备工作
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2016-11-11
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2016/11/11/GitHubPage搭建Hexo——安装Hexo/">
-        <h2 class="post-title">
-            GitHubPage搭建Hexo——安装Hexo
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2016-11-11
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2016/11/10/GitHubPage搭建Hexo——域名/">
-        <h2 class="post-title">
-            GitHubPage搭建Hexo——域名
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2016-11-10
-    </p>
-</div>
-<hr>
-            
-                <div class="post-preview">
-    <a href="/2016/11/06/hello-world/">
-        <h2 class="post-title">
-            Hello World
-        </h2>
-        
-    </a>
-    <p class="post-meta">
-        <!-- Date and Author -->
-        
-        2016-11-06
-    </p>
-</div>
-<hr>
-            
+        <div class="col-sm-8 blog-main">
+          
+  
+    <article id="post-javascript-严格模式" class="article article-type-post" itemscope itemprop="blogPost">
 
-            <ul class="pager">
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/11/javascript-严格模式/">javascript-严格模式</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2016/11/11/javascript-严格模式/" class="article-date"><time datetime="2016-11-11T13:35:44.000Z" itemprop="datePublished">2016-11-11</time></a>
+</div>
+
     
     
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##关于严格模式</p>
+<p>在ECMAScript5中，除了正常的模式以外，增加了“严格模式”（strict）。我们的javascript将在更加严格的条件下运行。</p>
+<p>##使用严格模式的目的</p>
+<ul>
+<li>消除原有语法中一些不合理、不严谨的问题，减少怪异行为。</li>
+<li>消除代码中的不安全之处，保证代码的安全</li>
+<li>提高编译效率和运行速度</li>
+<li>为后序版本做铺垫</li>
 </ul>
-        </div>
+<p>##如何进入严格模式</p>
+<p>进入严格模式的标志是使用</p>
+<p><code>&quot;use strict&quot;</code><br>在一些旧版本的浏览器中，会将其解析为字符串，加以忽略</p>
+<p>##如何调用</p>
+<p>##语法和行为的改变</p>
+<p><a href="http://blog.csdn.net/adparking/article/details/42424173" target="_blank" rel="external">http://blog.csdn.net/adparking/article/details/42424173</a></p>
+
+      
     </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/11/javascript-严格模式/" data-id="civf0938d0006z0vpd89s522b" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-GitHubPage搭建Hexo——安装Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/11/GitHubPage搭建Hexo——安装Hexo/">GitHubPage搭建Hexo——安装Hexo</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2016/11/11/GitHubPage搭建Hexo——安装Hexo/" class="article-date"><time datetime="2016-11-11T01:18:43.000Z" itemprop="datePublished">2016-11-11</time></a>
+</div>
+
+    
+    
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/11/GitHubPage搭建Hexo——安装Hexo/" data-id="civf093710000z0vpdmf4mfkn" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-GitHubPage搭建Hexo——准备工作" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/11/GitHubPage搭建Hexo——准备工作/">GitHubPage搭建Hexo——准备工作</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2016/11/11/GitHubPage搭建Hexo——准备工作/" class="article-date"><time datetime="2016-11-11T01:18:43.000Z" itemprop="datePublished">2016-11-11</time></a>
+</div>
+
+    
+    
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#GitHub账号<br>Github全球最大的基友平台。注册账号就不多说了，跪求不要使用QQ邮箱注册GitHub。<br>登录后正式开始</p>
+<p>####第一步：新建仓库</p>
+<p><img src="http://i.imgur.com/prhgmQn.png" alt=""></p>
+<p>####第二步：输入需要创建的仓库名。<br>格式为账号名.github.io完成后，创建即可。</p>
+<pre><code>songwear.github.io
+之前我已经创建过了，所以系统提示已经存在。
+</code></pre><p><img src="http://i.imgur.com/qNZU08z.png" alt=""></p>
+<p>就是这么简单，仓库已经创建完成，稍后我们会上传代码。</p>
+<p>#NodeJS环境<br>Hexo是一个基于Node.js的静态博客程序。因此我们需要NodeJS来安装Hexo。安装步骤没什么好说的，<a href="https://nodejs.org/en/" target="_blank" rel="external">官网</a>直接下载安装程序即可，也无需配置环境变量。(nodejs中已经包含npm无需再次下载)</p>
+<p><img src="http://i.imgur.com/1uYUSFN.png" alt=""></p>
+<p>#Git客户端<br>Git就不多说了，<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank" rel="external">廖雪峰</a>讲的足够好了，我只是讲一下我们常用的命令。</p>
+<p>####第一步：安装Git<br>到<a href="https://git-scm.com/downloads" target="_blank" rel="external">官网</a>下载，一切默认，安装即可。成功之后，桌面会多出一个Git Bash的快捷方式，以后我们进行版本控制完全靠他了。</p>
+<p><img src="http://i.imgur.com/G6Sbq66.png" alt=""></p>
+<p>####第二步：设置本地的Git账号</p>
+<p>打开Git Bash，输入下面的命令，表示你这台机器上所有的Git仓库都会使用这个账户操作。</p>
+<pre><code>$ git config --global user.name &quot;Your Name&quot;
+$ git config --global user.email &quot;email@example.com&quot;
+</code></pre><p>如果需要查看当前设置的用户名和邮箱，分别执行下面的操作</p>
+<pre><code>$ git config user.name
+$ git config user.email
+</code></pre><p>如果需要查看当前设置的用户名和邮箱，分别执行下面的操作    </p>
+<pre><code>$ git config --global user.name &quot;username&quot;
+$ git config --global user.email &quot;email&quot;    
+</code></pre><p>####第三步：关联GitHub账号<br>首先在本地生成密钥，存放的路径就是后面显示的地址，如果不做修改</p>
+<pre><code>默认为：C:\Users\Administrator\.ssh
+
+ssh-keygen -t rsa -C &quot;你的Github邮箱&quot;
+</code></pre><p><img src="http://i.imgur.com/4MQ2NRC.png" alt=""></p>
+<p>接下来提示输入密码，为了应对即使密钥文件不小心泄露了，别人也不能直接利用密钥操作你的git帐号这个问题。当然，为了操作方便，直接输入回车，使其为空即可。</p>
+<p><img src="http://i.imgur.com/sZq0s9z.png" alt=""></p>
+<p>确认你输入的密码</p>
+<p><img src="http://i.imgur.com/OB88YWN.png" alt=""></p>
+<p>设置成功</p>
+<p><img src="http://i.imgur.com/qAPmd70.png" alt=""></p>
+<p>我们进入到本地 <code>C:\Users\Administrator\.ssh</code> 文件夹下,找到<code>id_rsa.pub</code>这个文件，使用记事本即可打开，复制全部代码。</p>
+<p><img src="http://i.imgur.com/ApQ7j2M.png" alt=""></p>
+<p>接下来，打开GitHub，选择Settings——SSH and GPG keys——New SSH key，将我们刚刚复制的<code>id_rsa.pub</code>中的内容粘贴到Key中，Title可以自定义。</p>
+<p><img src="http://i.imgur.com/3Z0vVj7.png" alt=""></p>
+<p><img src="http://i.imgur.com/DuMdWqq.png" alt=""></p>
+<p>填写完成后，选择按钮Add SSH key。</p>
+<p><img src="http://i.imgur.com/uWHMN3V.png" alt=""></p>
+<p>接下来要求你输入你的GitHub密码。</p>
+<p><img src="http://i.imgur.com/yyUmNey.png" alt=""></p>
+<p>确认后，将会显示下图效果。</p>
+<p><img src="http://i.imgur.com/SVjtFuf.png" alt=""></p>
+<p>以上，GitHub上的工作就完成了。</p>
+<p>回到Git中，输入命令,提示Hi 用户名!You’ve successfully………………就成功了。</p>
+<pre><code>ssh -T git@github.com
+</code></pre><p><img src="http://i.imgur.com/GDJXsP0.png" alt=""></p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/11/GitHubPage搭建Hexo——准备工作/" data-id="civf0937n0002z0vp9o5gks71" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-GitHubPage搭建Hexo——域名" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/10/GitHubPage搭建Hexo——域名/">GitHubPage搭建Hexo——域名</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2016/11/10/GitHubPage搭建Hexo——域名/" class="article-date"><time datetime="2016-11-10T12:21:57.000Z" itemprop="datePublished">2016-11-10</time></a>
+</div>
+
+    
+    
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#</p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/10/GitHubPage搭建Hexo——域名/" data-id="civf0937s0003z0vpt7kmg7no" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHubPage/">GitHubPage</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/域名/">域名</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/搭建Hexo/">搭建Hexo</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <header class="article-header">
+    
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/06/hello-world/">Hello World</a>
+    </h1>
+  
+
+
+  </header>
+
+  <div class="article-meta">
+    <div class="article-datetime">
+  <a href="/2016/11/06/hello-world/" class="article-date"><time datetime="2016-11-05T16:36:41.269Z" itemprop="datePublished">2016-11-06</time></a>
+</div>
+
+    
+    
+
+  </div>
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+
+    
+      
+
+    
+
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/06/hello-world/" data-id="civf0937u0004z0vpzunrkffi" class="article-share-link">
+        <i class="fa fa-share"></i> Share
+      </a>
+      
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+
+
+        </div>
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          
+  <div class="sidebar-module sidebar-module-inset">
+  <h4>About</h4>
+  <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+
 </div>
 
 
+  
 
-    <!-- Footer -->
-    <hr />
 
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    
+  
+  <div class="sidebar-module">
+    <h4>Tags</h4>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/GitHubPage/">GitHubPage</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/域名/">域名</a><span class="sidebar-module-list-count">1</span></li><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/tags/搭建Hexo/">搭建Hexo</a><span class="sidebar-module-list-count">1</span></li></ul>
+  </div>
 
-                    
 
-                    
-                        <li>
-                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    
 
-                    
+  
+  <div class="sidebar-module">
+    <h4>Tag Cloud</h4>
+    <p class="tagcloud">
+      <a href="/tags/GitHubPage/" style="font-size: 10px;">GitHubPage</a> <a href="/tags/域名/" style="font-size: 10px;">域名</a> <a href="/tags/搭建Hexo/" style="font-size: 10px;">搭建Hexo</a>
+    </p>
+  </div>
 
-                    
 
-                    
-                </ul>
-                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
-                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
-            </div>
+  
+  <div class="sidebar-module">
+    <h4>Archives</h4>
+    <ul class="sidebar-module-list"><li class="sidebar-module-list-item"><a class="sidebar-module-list-link" href="/archives/2016/11/">November 2016</a><span class="sidebar-module-list-count">5</span></li></ul>
+  </div>
+
+
+
+  
+  <div class="sidebar-module">
+    <h4>Recents</h4>
+    <ul class="sidebar-module-list">
+      
+        <li>
+          <a href="/2016/11/11/javascript-严格模式/">javascript-严格模式</a>
+        </li>
+      
+        <li>
+          <a href="/2016/11/11/GitHubPage搭建Hexo——安装Hexo/">GitHubPage搭建Hexo——安装Hexo</a>
+        </li>
+      
+        <li>
+          <a href="/2016/11/11/GitHubPage搭建Hexo——准备工作/">GitHubPage搭建Hexo——准备工作</a>
+        </li>
+      
+        <li>
+          <a href="/2016/11/10/GitHubPage搭建Hexo——域名/">GitHubPage搭建Hexo——域名</a>
+        </li>
+      
+        <li>
+          <a href="/2016/11/06/hello-world/">Hello World</a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+
         </div>
     </div>
+  </div>
+  <footer class="blog-footer">
+  <div class="container">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
 </footer>
 
+  
 
-    <!-- After footer scripts -->
-    
-<!-- jQuery -->
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
 
-<!-- Bootstrap -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-<!-- Gallery -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-
-<!-- Disqus Comments -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 
+
+<script src="/js/script.js"></script>
 
 </body>
-
 </html>
