@@ -2115,7 +2115,10 @@ footer {
 @media only screen and (min-width: 568px) {
   .article-content pre,
   .article-content .highlight,
-  .article-content .highlight pre {
+  .article-content .highlight pre,
+.article-content pre,
+.article-content .highlight,
+.article-content .highlight pre {
     font-size: 0.9em;
   }
 }
@@ -2126,7 +2129,9 @@ footer {
 }
 @media only screen and (min-width: 568px) {
   .article-content .highlight .gutter pre,
-  .article-content .gist .gist-file .gist-data .line-numbers {
+  .article-content .gist .gist-file .gist-data .line-numbers,
+.article-content .highlight .gutter pre,
+.article-content .gist .gist-file .gist-data .line-numbers {
     font-size: 0.9em;
     line-height: 1.5;
   }

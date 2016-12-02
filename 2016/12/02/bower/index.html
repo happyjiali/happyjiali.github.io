@@ -1,0 +1,572 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>bower 的安装使用 | JiaLi&#39;s 畅想小屋</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="佳丽">
+    
+
+    
+    <meta name="description" content="了解如何安装使用bower">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bower 的安装使用">
+<meta property="og:url" content="http://yoursite.com/2016/12/02/bower/index.html">
+<meta property="og:site_name" content="JiaLi's 畅想小屋">
+<meta property="og:description" content="了解如何安装使用bower">
+<meta property="og:image" content="http://yoursite.com/../img/bower-logo.png">
+<meta property="og:updated_time" content="2016-12-02T12:10:41.558Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="bower 的安装使用">
+<meta name="twitter:description" content="了解如何安装使用bower">
+<meta name="twitter:image" content="http://yoursite.com/../img/bower-logo.png">
+
+    
+    <link rel="alternative" href="/atom.xml" title="JiaLi&#39;s 畅想小屋" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="JiaLi&#39;s 畅想小屋" title="JiaLi&#39;s 畅想小屋"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="JiaLi&#39;s 畅想小屋">JiaLi&#39;s 畅想小屋</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/12/02/bower/" title="bower 的安装使用" itemprop="url">bower 的安装使用</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="佳丽" target="_blank" itemprop="author">佳丽</a>
+		
+  <p class="article-time">
+    <time datetime="2016-12-02T12:00:50.711Z" itemprop="datePublished"> 发表于 2016-12-02</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Bower"><span class="toc-number">1.</span> <span class="toc-text">Bower</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本使用"><span class="toc-number">1.2.</span> <span class="toc-text">基本使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化-bower-json-文件"><span class="toc-number">1.2.1.</span> <span class="toc-text">初始化 bower.json 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装、更新、卸载"><span class="toc-number">1.2.2.</span> <span class="toc-text">安装、更新、卸载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缓存和离线"><span class="toc-number">1.2.3.</span> <span class="toc-text">缓存和离线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看通过-bower-安装的依赖"><span class="toc-number">1.2.4.</span> <span class="toc-text">查看通过 bower 安装的依赖</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置文件-bowerrc"><span class="toc-number">1.3.</span> <span class="toc-text">配置文件 .bowerrc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">1.4.</span> <span class="toc-text">结束语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thanks"><span class="toc-number">1.5.</span> <span class="toc-text">Thanks</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<h1 id="Bower"><a href="#Bower" class="headerlink" title="Bower"></a>Bower</h1><p><img src="../img/bower-logo.png" alt="bower-logo" width="300"></p>
+<p><a href="https://bower.io/" target="_blank" rel="external">Bower</a> 是一个针对浏览器端的包管理工具。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>Bower基于node.js，所以安装之前，必须先确保已安装node.js：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ node -v</div></pre></td></tr></table></figure>
+<p>使用 Bower 下载包的时候，也可以通过项目的 github 仓库地址进行下载安装，<br>所以 Bower 也依赖于 git 环境，安装前请确认是否有 git 环境：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git --version</div></pre></td></tr></table></figure>
+<p>确认有了 Node 和 git 两个环境之后，就可以使用 npm 安装 bower 了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install --global bower</div></pre></td></tr></table></figure>
+<p>安装成功以后，可以通过输入 <code>bower help</code> 命令查看 bower 的使用帮助：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bower <span class="built_in">help</span></div></pre></td></tr></table></figure>
+<p>下面的命令可以更新或卸载 Bower：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 重新安装就是更新，或者使用 npm update --global bower</span></div><div class="line">$ npm install --global bower</div><div class="line"><span class="comment"># 卸载</span></div><div class="line">$ npm uninstall --global bower</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><h3 id="初始化-bower-json-文件"><a href="#初始化-bower-json-文件" class="headerlink" title="初始化 bower.json 文件"></a>初始化 <code>bower.json</code> 文件</h3><p>在项目根目录下，运行下面的命令，进行初始化：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bower init</div></pre></td></tr></table></figure>
+<p>通过回答几个问题，就会自动生成 <code>bower.json</code> 文件。<br>这是bower管理工具的配置文件，下面是一个例子：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"name"</span>: <span class="string">"docs"</span>,</div><div class="line">  <span class="attr">"description"</span>: <span class="string">"bower包管理工具演示"</span>,</div><div class="line">  <span class="attr">"main"</span>: <span class="string">"index.js"</span>,</div><div class="line">  <span class="attr">"authors"</span>: [</div><div class="line">    <span class="string">"lpz &lt;mail@lipengzhou.com&gt; (http://www.lipengzhou.com/)"</span></div><div class="line">  ],</div><div class="line">  <span class="attr">"license"</span>: <span class="string">"MIT"</span>,</div><div class="line">  <span class="attr">"homepage"</span>: <span class="string">""</span>,</div><div class="line">  <span class="attr">"ignore"</span>: [</div><div class="line">  ],</div><div class="line">  <span class="attr">"dependencies"</span>: &#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="安装、更新、卸载"><a href="#安装、更新、卸载" class="headerlink" title="安装、更新、卸载"></a>安装、更新、卸载</h3><p>安装之前可以通过：<a href="https://bower.io/search/" target="_blank" rel="external">https://bower.io/search/</a> 在线搜索，搜索可用的包。</p>
+<p>bower install 命令用于安装某个库，需要指明库的名字:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bower install [--save] 包名</div></pre></td></tr></table></figure>
+<p>Bower会使用库的名字，去在线索引中搜索该库的网址。<br>某些情况下，如果一个库很新，可能需要我们手动指定该库的网址：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ bower install [--save] https://github.com/lepture/editor.git</div><div class="line">$ bower install [--save] https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js</div></pre></td></tr></table></figure>
+<p>上面的命令说明，指定的网址可以是 github 地址、http 网址等。</p>
+<p>Bower 默认会下载到当前项目根路径下的 <code>bower_components</code> 目录。</p>
+<p>如果某个库依赖另一个库，安装时默认将所依赖的库一起安装。<br>比如，bootstrap 依赖 jQuery，安装时会连 jQuery 一起安装。</p>
+<p>默认情况下，会安装该库的最新版本，但是也可以手动指定版本号：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bower install jquery<span class="comment">#1.12.1</span></div></pre></td></tr></table></figure>
+<p>bower update 用于更新一个库，将其更新为最新版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bower update jquery</div></pre></td></tr></table></figure>
+<p>如果不给出库名，则更新所有库。</p>
+<p>卸载指定库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bower uninstall [--save] 包名</div></pre></td></tr></table></figure>
+<p>注意，默认情况下会连所依赖的库一起卸载。<br>比如，bootstrap 依赖 jquery，卸载时会连 jquery 一起卸载，除非还有别的库依赖 jquery。</p>
+<h3 id="缓存和离线"><a href="#缓存和离线" class="headerlink" title="缓存和离线"></a>缓存和离线</h3><p>查看所有缓存包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bower cache list</div></pre></td></tr></table></figure>
+<p>从缓存安装指定包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bower install [--save] 包名 --offline</div></pre></td></tr></table></figure>
+<p>清楚缓存中指定包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bower cache clean 包名</div></pre></td></tr></table></figure>
+<p>清除缓存中所有的包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ bower cache clean list</div></pre></td></tr></table></figure>
+<h3 id="查看通过-bower-安装的依赖"><a href="#查看通过-bower-安装的依赖" class="headerlink" title="查看通过 bower 安装的依赖"></a>查看通过 bower 安装的依赖</h3><p>bower list或bower ls命令，用于列出项目所使用的所有库：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ bower list</div><div class="line"><span class="comment"># 或者</span></div><div class="line">$ bower ls</div></pre></td></tr></table></figure>
+<h2 id="配置文件-bowerrc"><a href="#配置文件-bowerrc" class="headerlink" title="配置文件 .bowerrc"></a>配置文件 <code>.bowerrc</code></h2><p>项目根目录下的 <code>.bowerrc</code> 文件是 Bower 的配置文件，<br>可以用来配置使用 Bower 安装包的指定目录等信息，例如：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"directory"</span>: <span class="string">"js/vender"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>只要经过上了上面的配置，则安装包的时候，会将依赖项放到配置的路径中。</p>
+<h2 id="结束语"><a href="#结束语" class="headerlink" title="结束语"></a>结束语</h2><h2 id="Thanks"><a href="#Thanks" class="headerlink" title="Thanks"></a>Thanks</h2><ul>
+<li><a href="https://bower.io/" target="_blank" rel="external">Bower A package manager for the web</a></li>
+<li><a href="http://javascript.ruanyifeng.com/tool/bower.html" target="_blank" rel="external">Bower: 客户端库管理工具</a></li>
+<li><a href="http://www.html-js.com/article/Learn-JavaScript-learning-Bower-frontend-development-package-management-tools" target="_blank" rel="external">学习Bower – 前端开发包管理工具</a></li>
+<li><a href="https://segmentfault.com/a/1190000002971135" target="_blank" rel="external">bower简明入门教程</a></li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/文章/">文章</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/基础/">基础</a><a href="/tags/入门/">入门</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2016/12/02/bower/" data-title="bower 的安装使用 | JiaLi&#39;s 畅想小屋" data-tsina="18341342800" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/11/28/javascript/"  title="JavaScript 语言基础">
+ <strong>下一篇：</strong><br/> 
+ <span>JavaScript 语言基础
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/12/02/bower/" data-title="bower 的安装使用" data-url="http://yoursite.com/2016/12/02/bower/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Bower"><span class="toc-number">1.</span> <span class="toc-text">Bower</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本使用"><span class="toc-number">1.2.</span> <span class="toc-text">基本使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化-bower-json-文件"><span class="toc-number">1.2.1.</span> <span class="toc-text">初始化 bower.json 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装、更新、卸载"><span class="toc-number">1.2.2.</span> <span class="toc-text">安装、更新、卸载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缓存和离线"><span class="toc-number">1.2.3.</span> <span class="toc-text">缓存和离线</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查看通过-bower-安装的依赖"><span class="toc-number">1.2.4.</span> <span class="toc-text">查看通过 bower 安装的依赖</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#配置文件-bowerrc"><span class="toc-number">1.3.</span> <span class="toc-text">配置文件 .bowerrc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结束语"><span class="toc-number">1.4.</span> <span class="toc-text">结束语</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Thanks"><span class="toc-number">1.5.</span> <span class="toc-text">Thanks</span></a></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+		
+		  
+			<li><a href="/categories/文章/" title="文章">文章<sup>3</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/基础/" title="基础">基础<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/入门/" title="入门">入门<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/介绍/" title="介绍">介绍<sup>1</sup></a></li>
+			
+		
+			
+		
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://liergou.vip" target="_blank" title="Liergou">Liergou</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://sunqi.info" target="_blank" title="SunQi">SunQi</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=18341342800&verifier=4eb6b17f&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Jia Li. <br/>
+			Your attitude, not your aptitude, will determine your altitude.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/18341342800" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:18341342800@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="佳丽">佳丽</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"happyjiali"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'null', 'null');  
+ga('send', 'pageview');
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
