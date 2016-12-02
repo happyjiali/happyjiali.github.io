@@ -1,0 +1,609 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>初识HTML5（一） | JiaLi&#39;s 畅想小屋</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="佳丽">
+    
+
+    
+    <meta name="description" content="初步了解HTML5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初识HTML5（一）">
+<meta property="og:url" content="http://yoursite.com/2016/12/02/初识HTML51/index.html">
+<meta property="og:site_name" content="JiaLi's 畅想小屋">
+<meta property="og:description" content="初步了解HTML5">
+<meta property="og:image" content="http://yoursite.com/image/2016-12-02_204605.png">
+<meta property="og:image" content="http://yoursite.com/image/2016-12-02_204848.png">
+<meta property="og:updated_time" content="2016-12-02T13:05:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="初识HTML5（一）">
+<meta name="twitter:description" content="初步了解HTML5">
+<meta name="twitter:image" content="http://yoursite.com/image/2016-12-02_204605.png">
+
+    
+    <link rel="alternative" href="/atom.xml" title="JiaLi&#39;s 畅想小屋" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="JiaLi&#39;s 畅想小屋" title="JiaLi&#39;s 畅想小屋"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="JiaLi&#39;s 畅想小屋">JiaLi&#39;s 畅想小屋</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/12/02/初识HTML51/" title="初识HTML5（一）" itemprop="url">初识HTML5（一）</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="佳丽" target="_blank" itemprop="author">佳丽</a>
+		
+  <p class="article-time">
+    <time datetime="2016-12-02T12:33:50.905Z" itemprop="datePublished"> 发表于 2016-12-02</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML5"><span class="toc-number">1.</span> <span class="toc-text">HTML5</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML5-的基本概念"><span class="toc-number">1.1.</span> <span class="toc-text">HTML5 的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5-能做什么？-为什么学习？"><span class="toc-number">1.1.1.</span> <span class="toc-text">HTML5 能做什么？ 为什么学习？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Html5的兼容性（浏览器之间的兼容）"><span class="toc-number">1.1.2.</span> <span class="toc-text">Html5的兼容性（浏览器之间的兼容）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML5-的骨架"><span class="toc-number">1.2.</span> <span class="toc-text">HTML5 的骨架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Html的发展历程"><span class="toc-number">1.2.1.</span> <span class="toc-text">Html的发展历程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html5新增的标签"><span class="toc-number">1.3.</span> <span class="toc-text">html5新增的标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新增的6大结构标签："><span class="toc-number">1.3.1.</span> <span class="toc-text">新增的6大结构标签：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#由于html5新增的标签有兼容问题，所以我们需要做兼容！怎么实现？"><span class="toc-number">1.3.2.</span> <span class="toc-text">由于html5新增的标签有兼容问题，所以我们需要做兼容！怎么实现？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html5新增的智能表单"><span class="toc-number">1.3.3.</span> <span class="toc-text">html5新增的智能表单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#智能验证表单"><span class="toc-number">1.3.4.</span> <span class="toc-text">智能验证表单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表单的新属性"><span class="toc-number">1.3.5.</span> <span class="toc-text">表单的新属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#智能感应"><span class="toc-number">1.3.6.</span> <span class="toc-text">智能感应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html5调用视频"><span class="toc-number">1.3.7.</span> <span class="toc-text">html5调用视频</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#标签：video"><span class="toc-number">1.3.7.1.</span> <span class="toc-text">标签：video</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频的API：（注：是JS的，JQ去使用需要转化对象）"><span class="toc-number">1.3.7.2.</span> <span class="toc-text">视频的API：（注：是JS的，JQ去使用需要转化对象）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#音频：audio的用法与视频一模一样"><span class="toc-number">1.3.8.</span> <span class="toc-text">音频：audio的用法与视频一模一样</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS获取元素的新方式"><span class="toc-number">1.3.9.</span> <span class="toc-text">JS获取元素的新方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS类名操作"><span class="toc-number">1.3.10.</span> <span class="toc-text">JS类名操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义属性"><span class="toc-number">1.3.11.</span> <span class="toc-text">自定义属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义进度条"><span class="toc-number">1.3.12.</span> <span class="toc-text">自定义进度条</span></a></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<h1 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h1><h2 id="HTML5-的基本概念"><a href="#HTML5-的基本概念" class="headerlink" title="HTML5 的基本概念"></a>HTML5 的基本概念</h2><h3 id="HTML5-能做什么？-为什么学习？"><a href="#HTML5-能做什么？-为什么学习？" class="headerlink" title="HTML5 能做什么？ 为什么学习？"></a>HTML5 能做什么？ 为什么学习？</h3><p>HTML5并不仅仅只是做为HTML标记语言的一个最新版本，更重要的是它制定了Web应用开发的一系列标准，成为第一个将Web做为应用开发平台的HTML语言。<br>HTML5定义了一系列新元素，如新语义标签、智能表单、多媒体标签等，可以帮助开发者创建富互联网应用，同时有令人眼花缭乱的css 3，还提供了一些Javascript API，如地理定位、重力感应、硬件访问等，可以在浏览器内实现类原生应用，制作webApp，甚至结合Canvas我们可开发网页版游戏。<br>我们日常讨论的H5其实指的是一个泛称，它是由HTML5 + CSS3 + Javascript等技术组合而成的一个应用开发平台。</p>
+<h3 id="Html5的兼容性（浏览器之间的兼容）"><a href="#Html5的兼容性（浏览器之间的兼容）" class="headerlink" title="Html5的兼容性（浏览器之间的兼容）"></a>Html5的兼容性（浏览器之间的兼容）</h3><p>兼容性： 新增的部分有兼容性问题（绝大部分）<br><img src="image/2016-12-02_204605.png" alt="兼容"></p>
+<p>并不是所有的html5都是IE9就兼容的，有一些属性是需要IE10，等更高级的浏览器才能兼容，而html5更多运用在移动端方面，因为移动端搭载的浏览器就比较高级</p>
+<h2 id="HTML5-的骨架"><a href="#HTML5-的骨架" class="headerlink" title="HTML5 的骨架"></a>HTML5 的骨架</h2><h3 id="Html的发展历程"><a href="#Html的发展历程" class="headerlink" title="Html的发展历程"></a>Html的发展历程</h3><p><img src="image/2016-12-02_204848.png" alt="发展历程"></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html lang="en"&gt;</div><div class="line">&lt;head&gt;</div><div class="line">	&lt;meta charset="UTF-8"&gt;</div><div class="line">	&lt;title&gt;Document&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>说明： html5骨架是没有兼容性问题</p>
+<p>反问：如果在xt的文档DTD里面书写h5的内容，会带来兼容问题么？</p>
+<p>答：跟你用什么文档DTD没有关系 主要跟浏览器有关系</p>
+<h2 id="html5新增的标签"><a href="#html5新增的标签" class="headerlink" title="html5新增的标签"></a>html5新增的标签</h2><h3 id="新增的6大结构标签："><a href="#新增的6大结构标签：" class="headerlink" title="新增的6大结构标签："></a>新增的6大结构标签：</h3><p>（1）header  （2）nav （3）section （4）aside （5）article （6）footer</p>
+<p>作用：跟div一模一样 ，就是增加了语义性 更加利于seo优化</p>
+<h3 id="由于html5新增的标签有兼容问题，所以我们需要做兼容！怎么实现？"><a href="#由于html5新增的标签有兼容问题，所以我们需要做兼容！怎么实现？" class="headerlink" title="由于html5新增的标签有兼容问题，所以我们需要做兼容！怎么实现？"></a>由于html5新增的标签有兼容问题，所以我们需要做兼容！怎么实现？</h3><ul>
+<li><p>利用document.creatElement()去创建html5的新标签，同时设置成块元素（相对麻烦）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> lt IE <span class="number">9</span>]&gt; </div><div class="line">        &lt;script type="text/javascript"&gt;</div><div class="line">	    var e = "abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video".split(', ');</div><div class="line">		    var i= e.length;</div><div class="line">		    while (i--)&#123;</div><div class="line">		         document.createElement(e[i])</div><div class="line">		    &#125;  </div><div class="line">		&lt;/script&gt;</div><div class="line">    &lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>借助于第三方的JS框架 =&gt;html5shiv.min.js （推荐）配合IE的hack实现最佳兼容</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> lt IE <span class="number">9</span>]&gt; </div><div class="line"> 	&lt;script src="js/html5shiv.min.js"&gt;&lt;/script&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>注明：还有一些新增的用到的不多，所以了解即可，上述六个是最为常用的</p>
+<h3 id="html5新增的智能表单"><a href="#html5新增的智能表单" class="headerlink" title="html5新增的智能表单"></a>html5新增的智能表单</h3><p>以前学过 type =text ，submit ，reset，radio。。。。</p>
+<ul>
+<li>Input表单的type新属性值     <ul>
+<li>type=”email”     限制用户输入必须为Email类型 </li>
+<li>type=”url”     限制用户输入必须为URL类型 </li>
+<li>type=”date”     自动生成一个日期控件</li>
+<li>type=”time”     同上 </li>
+<li>type=”month”     同上</li>
+<li>type=”week”     同上</li>
+<li>type=”number”     限制用户输入必须为数字类型 </li>
+<li>type=”range”     产生一个滑动条的表单 </li>
+<li>type=”search”     产生一个搜索意义的表单 </li>
+<li>type=”color”     生成一个颜色选择表单 </li>
+</ul>
+</li>
+</ul>
+<p>总结：智能表单的兼容比较大，在移动端用的较多，移动端会自动调取手机本身的控件（不同手机之间会略有不同，但如果需要高度自定义，就需要用JS去写了）</p>
+<h3 id="智能验证表单"><a href="#智能验证表单" class="headerlink" title="智能验证表单"></a>智能验证表单</h3><ul>
+<li>required =&gt; 验证表单是否为空，必须配合form表单来使用</li>
+<li>pattern =&gt; 自定义验证表单规则，匹配正则 </li>
+<li>invalid =&gt; 验证失败的时候触发的事件</li>
+<li>dom.setCustomValidity() =&gt; 自定义弹出的内容 参数：string 自定义的内容</li>
+</ul>
+<h3 id="表单的新属性"><a href="#表单的新属性" class="headerlink" title="表单的新属性"></a>表单的新属性</h3><ul>
+<li>placeholder =&gt; 占位文本，体验更加</li>
+<li>autofocus =&gt; 自动获取焦点   dom.focus（）</li>
+<li>autocompleted =&gt; 提交一次后下次自动补全 注意：必须提交一次之后，同时必须要有name属性</li>
+<li>multiple =&gt; 配合file控件实现多选</li>
+<li>form =&gt; 配合form表单的id值实现关联，在任意位置都可以被提交，但是不建议这么写</li>
+</ul>
+<h3 id="智能感应"><a href="#智能感应" class="headerlink" title="智能感应"></a>智能感应</h3><p>利用表单的list=“datalist的id值”与datalist这个标签取得联系实现的</p>
+<h3 id="html5调用视频"><a href="#html5调用视频" class="headerlink" title="html5调用视频"></a>html5调用视频</h3><p>直到现在，我们的视频依旧采用第三方的网站播放视频，并且需要借助于flash技术</p>
+<p>在html5中，我们只需要借助于video这个标签来实现视频的播放</p>
+<h4 id="标签：video"><a href="#标签：video" class="headerlink" title="标签：video"></a>标签：video</h4><p>标签属性：</p>
+<ul>
+<li>autoplay =&gt;视频默认加载完播放</li>
+<li>controls =&gt;播放的控件</li>
+<li>loop =&gt;控制循环</li>
+<li>poster =&gt;在视频没有播放的时候的预览图片</li>
+</ul>
+<p>我们发现每一个浏览器支持的格式都不一样，所以我们需要利用source标签实现兼容（MP4格式已经全被兼容）</p>
+<h4 id="视频的API：（注：是JS的，JQ去使用需要转化对象）"><a href="#视频的API：（注：是JS的，JQ去使用需要转化对象）" class="headerlink" title="视频的API：（注：是JS的，JQ去使用需要转化对象）"></a>视频的API：（注：是JS的，JQ去使用需要转化对象）</h4><ul>
+<li>play（）//控制视频播放</li>
+<li>pause（）//控制视频暂停</li>
+<li>load（）//重新加载视频或者音频</li>
+</ul>
+<h3 id="音频：audio的用法与视频一模一样"><a href="#音频：audio的用法与视频一模一样" class="headerlink" title="音频：audio的用法与视频一模一样"></a>音频：audio的用法与视频一模一样</h3><h3 id="JS获取元素的新方式"><a href="#JS获取元素的新方式" class="headerlink" title="JS获取元素的新方式"></a>JS获取元素的新方式</h3><ul>
+<li>document.querySelector(‘selector’) 通过CSS选择器获取元素，符合匹配条件的第1个元素。可以传入复合选择器（如：.box li, .box &gt; li input[type=’button’]）等</li>
+<li>document.querySelectorAll(‘selector’) 通过CSS选择器获取元素，以类数组形式存在。可以传入复合选择器（如：.box li, .box &gt; li input[type=’button’]）等</li>
+</ul>
+<h3 id="JS类名操作"><a href="#JS类名操作" class="headerlink" title="JS类名操作"></a>JS类名操作</h3><ul>
+<li>Node.classList.add(‘class’) 添加class</li>
+<li>Node.classList.remove(‘class’) 移除class</li>
+<li>Node.classList.toggle(‘class’) 切换class，有则移除，无则添加</li>
+<li>Node.classList.contains(‘class’) 检测是否存在class</li>
+</ul>
+<p>Node指一个有效的DOM节点，是一个通称。</p>
+<h3 id="自定义属性"><a href="#自定义属性" class="headerlink" title="自定义属性"></a>自定义属性</h3><p>在HTML5中我们可以自定义属性，其格式如下data-*=””，例如</p>
+<p>data-info=”我是自定义属性”，通过Node.dataset[‘info’] 我们便可以获取到自定义的属性值。</p>
+<p>Node.dataset是以对象形式存在的</p>
+<p>当我们如下格式设置时，则需要以驼峰格式才能正确获取</p>
+<p>data-my-name=”itcast”，获取Node.dataset[‘myName’]</p>
+<h3 id="自定义进度条"><a href="#自定义进度条" class="headerlink" title="自定义进度条"></a>自定义进度条</h3><ul>
+<li>Progress</li>
+<li>Meter =&gt; 有颜色的切换</li>
+</ul>
+<p>总结：两种标签运用的不多，因为不能深度自定义，实际开发中，多是自己用div模拟</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/文章/">文章</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/基础/">基础</a><a href="/tags/入门/">入门</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2016/12/02/初识HTML51/" data-title="初识HTML5（一） | JiaLi&#39;s 畅想小屋" data-tsina="18341342800" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/12/02/初识HTML5/" title="">
+  <strong>上一篇：</strong><br/>
+  <span>
+  (no title)</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2016/12/02/getting_started/"  title="AngularJS">
+ <strong>下一篇：</strong><br/> 
+ <span>AngularJS
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2016/12/02/初识HTML51/" data-title="初识HTML5（一）" data-url="http://yoursite.com/2016/12/02/初识HTML51/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTML5"><span class="toc-number">1.</span> <span class="toc-text">HTML5</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML5-的基本概念"><span class="toc-number">1.1.</span> <span class="toc-text">HTML5 的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5-能做什么？-为什么学习？"><span class="toc-number">1.1.1.</span> <span class="toc-text">HTML5 能做什么？ 为什么学习？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Html5的兼容性（浏览器之间的兼容）"><span class="toc-number">1.1.2.</span> <span class="toc-text">Html5的兼容性（浏览器之间的兼容）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML5-的骨架"><span class="toc-number">1.2.</span> <span class="toc-text">HTML5 的骨架</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Html的发展历程"><span class="toc-number">1.2.1.</span> <span class="toc-text">Html的发展历程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#html5新增的标签"><span class="toc-number">1.3.</span> <span class="toc-text">html5新增的标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#新增的6大结构标签："><span class="toc-number">1.3.1.</span> <span class="toc-text">新增的6大结构标签：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#由于html5新增的标签有兼容问题，所以我们需要做兼容！怎么实现？"><span class="toc-number">1.3.2.</span> <span class="toc-text">由于html5新增的标签有兼容问题，所以我们需要做兼容！怎么实现？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html5新增的智能表单"><span class="toc-number">1.3.3.</span> <span class="toc-text">html5新增的智能表单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#智能验证表单"><span class="toc-number">1.3.4.</span> <span class="toc-text">智能验证表单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表单的新属性"><span class="toc-number">1.3.5.</span> <span class="toc-text">表单的新属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#智能感应"><span class="toc-number">1.3.6.</span> <span class="toc-text">智能感应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#html5调用视频"><span class="toc-number">1.3.7.</span> <span class="toc-text">html5调用视频</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#标签：video"><span class="toc-number">1.3.7.1.</span> <span class="toc-text">标签：video</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#视频的API：（注：是JS的，JQ去使用需要转化对象）"><span class="toc-number">1.3.7.2.</span> <span class="toc-text">视频的API：（注：是JS的，JQ去使用需要转化对象）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#音频：audio的用法与视频一模一样"><span class="toc-number">1.3.8.</span> <span class="toc-text">音频：audio的用法与视频一模一样</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS获取元素的新方式"><span class="toc-number">1.3.9.</span> <span class="toc-text">JS获取元素的新方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS类名操作"><span class="toc-number">1.3.10.</span> <span class="toc-text">JS类名操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义属性"><span class="toc-number">1.3.11.</span> <span class="toc-text">自定义属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义进度条"><span class="toc-number">1.3.12.</span> <span class="toc-text">自定义进度条</span></a></li></ol></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/文章/" title="文章">文章<sup>5</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/基础/" title="基础">基础<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/入门/" title="入门">入门<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/介绍/" title="介绍">介绍<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://liergou.vip" target="_blank" title="Liergou">Liergou</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://sunqi.info" target="_blank" title="SunQi">SunQi</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=18341342800&verifier=4eb6b17f&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Jia Li. <br/>
+			Your attitude, not your aptitude, will determine your altitude.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/18341342800" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<a href="mailto:18341342800@163.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="佳丽">佳丽</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"happyjiali"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'null', 'null');  
+ga('send', 'pageview');
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
